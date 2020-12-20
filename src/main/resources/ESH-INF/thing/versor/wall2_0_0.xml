@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="zwave"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+  xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0
+                      https://openhab.org/schemas/thing-description/v1.0.0">
+
+  <thing-type id="versor_wall2_00_000" listed="false">
+    <label>Versor Wall Controller</label>
+    <description><![CDATA[Wall controller]]></description>
+    <category>WallSwitch</category>
+
+    <!-- CHANNEL DEFINITIONS -->
+    <channels>
+    </channels>
+
+    <!-- DEVICE PROPERTY DEFINITIONS -->
+    <properties>
+      <property name="vendor">Versor</property>
+      <property name="modelId">Versor Wall Controller</property>
+      <property name="manufacturerId">0000</property>
+      <property name="manufacturerRef">0004:0001</property>
+    </properties>
+
+    <!-- CONFIGURATION DESCRIPTIONS -->
+    <config-description>
+
+      <!-- GROUP DEFINITIONS -->
+      <parameter-group name="association">
+        <context>link</context>
+        <label>Association Groups</label>
+      </parameter-group>
+
+      <!-- ASSOCIATION DEFINITIONS -->
+      <parameter name="group_1" type="text" groupName="association" multiple="true">
+        <label>1: Lifeline</label>
+        <multipleLimit>5</multipleLimit>
+      </parameter>
+
+      <parameter name="group_2" type="text" groupName="association" multiple="true">
+        <label>2: Button 1 Basic switch</label>
+        <multipleLimit>5</multipleLimit>
+      </parameter>
+      
+      <parameter name="group_3" type="text" groupName="association" multiple="true">
+        <label>3: Button 1 dimmer</label>
+        <multipleLimit>5</multipleLimit>
+      </parameter>
+
+      <parameter name="group_4" type="text" groupName="association" multiple="true">
+        <label>4: Button 2 Basic switch</label>
+        <multipleLimit>5</multipleLimit>
+      </parameter>
+      
+      <parameter name="group_5" type="text" groupName="association" multiple="true">
+        <label>5: Button 2 dimmer</label>
+        <multipleLimit>5</multipleLimit>
+      </parameter>
+
+      <parameter name="group_6" type="text" groupName="association" multiple="true">
+        <label>6: Button 3 Basic switch</label>
+        <multipleLimit>5</multipleLimit>
+      </parameter>
+      
+      <parameter name="group_7" type="text" groupName="association" multiple="true">
+        <label>7: Button 3 dimmer</label>
+        <multipleLimit>5</multipleLimit>
+      </parameter>
+
+      <parameter name="group_8" type="text" groupName="association" multiple="true">
+        <label>8: Button 4 Basic switch</label>
+        <multipleLimit>5</multipleLimit>
+      </parameter>
+      
+      <parameter name="group_9" type="text" groupName="association" multiple="true">
+        <label>9: Button 4 dimmer</label>
+        <multipleLimit>5</multipleLimit>
+      </parameter>
+      
+      <parameter name="group_10" type="text" groupName="association" multiple="true">
+        <label>10: Button 5 Basic switch</label>
+        <multipleLimit>5</multipleLimit>
+      </parameter>
+      
+      <parameter name="group_11" type="text" groupName="association" multiple="true">
+        <label>11: Button 5 dimmer</label>
+        <multipleLimit>5</multipleLimit>
+      </parameter>
+      
+      <!-- STATIC DEFINITIONS -->
+      <parameter name="node_id" type="integer" min="1" max="232" readOnly="true" required="true">
+        <label>Node ID</label>
+        <advanced>true</advanced>
+      </parameter>
+
+    </config-description>
+
+  </thing-type>
+
+</thing:thing-descriptions>
